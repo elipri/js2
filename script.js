@@ -14,7 +14,6 @@
             
             let date = new Date(new Date + 1000);
             let h = date.getHours();
-            //let h = 13;
             let m = date.getMinutes();
             let s = date.getSeconds();
 
@@ -32,7 +31,10 @@
 
             if (h == 12 || h > 12) {
                 if (h > 12) {
-                    h = "0" + (h - 12);
+                    h = h - 12;
+                    if(h<10) {
+                        h= "0"+h;
+                    }
                 }
                 t = ' PL';
             }
